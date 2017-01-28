@@ -1,15 +1,15 @@
 # Site settings
-title: GitBucket News
-#email: your-email@domain.com
-description: "GitBucket is a Git platform powered by Scala."
-url: "https://gitbucket.github.io"
-baseurl: "/gitbucket-news"
+title: PDF4J Projects News
+email: srbala@gmail.com
+description: "PDF4J, Java PDF tools."
+url: "https://pdf4j.github.io"
+baseurl: "/news"
 
 # Build settings
 markdown: kramdown
 #permalink: prettay
 
-paginate: 10
+paginate: 8
 
 kramdown:
   input: GFM
