@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![GitBucket Logo]({{site.baseurl}}/images/gitbucket_logo.png)
+![PDF4J Logo]({{site.baseurl}}/images/pdf4j-logo.png)
 
 GitBucket is a Git platform powered by Scala offering:
 
@@ -12,5 +12,5 @@ GitBucket is a Git platform powered by Scala offering:
 - High extensibility by plugins
 - API compatibility with GitHub
 
-Please visit [GitHub](https://github.com/gitbucket/gitbucket) to get more information.
+Please visit [GitHub](https://github.com/pdf4j/news) to get more information.
 
