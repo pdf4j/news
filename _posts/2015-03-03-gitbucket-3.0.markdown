@@ -1,0 +1,49 @@
+---
+layout: post
+title: "GitBucket 3.0 released!"
+date: 2015-03-03 00:00:00
+image: /images/gitbucket-3.0/gist_plugin.png
+categories: gitbucket
+---
+
+Today, we are pleased to announce the availability of new version of Scala based Git platform [GitBucket 3.0](https://github.com/gitbucket/gitbucket/releases/tag/3.0)!
+
+## New Plug-in system
+
+GitBucket 3.0 includes the new plug-in system.
+
+We can now make plug-in as standard SBT project. Plug-ins are completely integrated to GitBucket, So we can use all capability of GitBucket in plug-in. For example, we can write a plug-in controller as Scalatra controller and also we can use Slick in plug-in.
+
+Please note, all classes are moved to `gitbucket.core` to separate from plug-in classes explicitly.
+
+We've also released [gitbucket-gist-plugin](https://github.com/gitbucket/gitbucket-gist-plugin) which provides Gists like code snippet repository as a practical plug-in example.
+
+![Gist plug-in]({{site.baseurl}}/images/gitbucket-3.0/gist_plugin.png)
+
+You can install this plug-in by following procedure:
+
+1. Hit `./sbt.sh package` in the root directory of this repository.
+2. Copy `target/scala-2.11/gitbucket-gist-plugin_2.11-1.0.jar` into `GITBUCKET_HOME/plugins`.
+3. Restart GitBucket.
+
+## Connection pooling
+
+Added connection pooling by c3p0 to improve performance.
+
+In the near future, GitBucket will move to Slick3. It supports connection pooling by HikariCP. c3p0 based connection pooling might be temporary solution.
+
+## New branch UI
+
+The Branch UI has been similar to GitHub it. Now it shows number of ahead and behind commits also.
+
+![New branch UI]({{site.baseurl}}/images/gitbucket-3.0/new_branch_ui.png)
+
+## Compare between specified commit ids
+
+The compare view now provides diff for specified commit ids at `REPOSITORY_URL/compare/from...to`, not only branch names.
+
+![Compare commit ids]({{site.baseurl}}/images/gitbucket-3.0/compare_commit_id.png)
+
+In addition, some bug fix and improvements are contained in this release. See [all closed issues in this release](https://github.com/gitbucket/gitbucket/issues?q=is%3Aclosed+milestone%3A3.0) to know details.
+
+Enjoy GitBucket!
